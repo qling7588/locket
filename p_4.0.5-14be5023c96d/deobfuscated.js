@@ -1,6 +1,5 @@
 (function () {
   'use strict';
-
   var TAG = "[locket_qling_stable] ";
   var VERSION = "4.0.5";
   var STATE_KEY = "qling_STABLE_V4_DIAGNOSTICS";
@@ -8,7 +7,7 @@
   var CURRENT_SERVICE = "runtime";
   var VIDEO_SECONDS = 60;
   var VIDEO_BYTES = 104857600;
-  var ASSET_BASE = "https://raw.githubusercontent.com/qling-shop/locket_qling_stable/main/assets/";
+  var ASSET_BASE = "https://raw.githubusercontent.com/qling7588/locket/main/assets/";
   var CAPTIONS = [{
     id: "brand",
     section: "qling • Bản quyền",
@@ -865,14 +864,70 @@
         config[name] = true;
       }
     });
-    [assetPickerMaxDuration", "assetPickerMaxDurationSeconds", "asset_picker_max_duration", "asset_picker_max_duration_seconds", "cameraMaxDuration", "cameraRollDuration", "cameraRollDurationSeconds", "cameraRollGoldMaxDuration", "cameraRollGoldMaxDurationSeconds", "cameraRollMaxDuration", "cameraRollMaxDurationSec", "cameraRollMaxDurationSeconds", "cameraRollMaxSeconds", "cameraRollMaxVideoDuration", "cameraRollMaxVideoDurationSeconds", "cameraRollMaxVideoSeconds", "cameraRollSeconds", "cameraRollTrimDuration", "cameraRollTrimDurationSeconds", "cameraRollTrimMaxDuration", "cameraRollTrimMaxDurationSeconds", "cameraRollUploadDuration", "cameraRollUploadDurationSeconds", "cameraRollUploadMaxDuration", "cameraRollUploadMaxDurationSeconds", "cameraRollUploadMaxSeconds", "cameraRollVideoDuration", "cameraRollVideoDurationSeconds", "cameraRollVideoLength", "cameraRollVideoLengthSeconds", "cameraRollVideoMaxDuration", "cameraRollVideoMaxDurationSeconds", "cameraRollVideoMaxLength", "cameraRollVideoMaxLengthSeconds", "cameraRollVideoMaxSeconds", "cameraRollVideoSeconds", "cameraRollVideoTrimDuration", "cameraRollVideoTrimDurationSeconds", "cameraRollVideoTrimMaxDuration", "cameraRollVideoTrimMaxDurationSeconds", "cameraRollVideoUploadMaxDuration", "cameraRollVideoUploadMaxDurationSeconds", "cameraRollVideoUploadMaxSeconds", "camera_max_duration", "camera_roll_duration_sec", "camera_roll_duration_seconds", "camera_roll_gold_max_duration", "camera_roll_gold_max_duration_seconds", "camera_roll_limit_seconds", "camera_roll_max_duration", "camera_roll_max_duration_sec", "camera_roll_max_duration_seconds", "camera_roll_max_seconds", "camera_roll_max_video_duration", "camera_roll_max_video_duration_seconds", "camera_roll_max_video_seconds", "camera_roll_seconds", "camera_roll_trim_duration", "camera_roll_trim_duration_seconds", "camera_roll_trim_max_duration", "camera_roll_trim_max_duration_seconds", "camera_roll_trim_max_seconds", "camera_roll_upload_duration", "camera_roll_upload_duration_seconds", "camera_roll_upload_max_duration", "camera_roll_upload_max_duration_sec", "camera_roll_upload_max_duration_seconds", "camera_roll_upload_max_seconds", "camera_roll_video_duration", "camera_roll_video_duration_sec", "camera_roll_video_duration_seconds", "camera_roll_video_length", "camera_roll_video_length_seconds", "camera_roll_video_limit_seconds", "camera_roll_video_max_duration", "camera_roll_video_max_duration_sec", "camera_roll_video_max_duration_seconds", "camera_roll_video_max_length", "camera_roll_video_max_length_seconds", "camera_roll_video_max_seconds", "camera_roll_video_seconds", "camera_roll_video_trim_duration", "camera_roll_video_trim_duration_seconds", "camera_roll_video_trim_max_duration", "camera_roll_video_trim_max_duration_seconds", "camera_roll_video_trim_max_seconds", "camera_roll_video_upload_duration", "camera_roll_video_upload_duration_seconds", "camera_roll_video_upload_limit_seconds", "camera_roll_video_upload_max_duration", "camera_roll_video_upload_max_duration_sec", "camera_roll_video_upload_max_duration_seconds", "camera_roll_video_upload_max_seconds", "extendedVideoDuration", "extendedVideoSeconds", "extended_video_duration", "extended_video_seconds", "galleryMaxDuration", "galleryMaxDurationSeconds", "galleryMaxSeconds", "galleryVideoDuration", "galleryVideoMaxDuration", "galleryVideoMaxDurationSeconds", "galleryVideoMaxSeconds", "gallery_max_duration", "gallery_max_duration_seconds", "gallery_max_seconds", "gallery_video_duration", "gallery_video_duration_seconds", "gallery_video_max_duration", "gallery_video_max_duration_seconds", "gallery_video_max_seconds", "goldMaxDuration", "gold_max_duration", "libraryVideoDuration", "libraryVideoMaxDuration", "libraryVideoMaxDurationSeconds", "libraryVideoMaxSeconds", "library_video_duration", "library_video_duration_seconds", "library_video_max_duration", "library_video_max_duration_seconds", "library_video_max_seconds", "longerVideoDurationSeconds", "longerVideoMaxDuration", "longerVideoMaxDurationSeconds", "longerVideoSeconds", "longerVideoUploadDuration", "longerVideoUploadDurationSeconds", "longerVideoUploadMaxDuration", "longerVideoUploadMaxDurationSeconds", "longerVideoUploadMaxSeconds", "longer_video_duration", "longer_video_duration_seconds", "longer_video_max_duration_seconds", "longer_video_seconds", "longer_video_upload_duration", "longer_video_upload_duration_seconds", "longer_video_upload_max_duration", "longer_video_upload_max_duration_seconds", "longer_video_upload_max_seconds", "longer_videos_duration", "maxDuration", "maxRecordingDuration", "maxTrimDuration", "maxTrimDurationSeconds", "maxTrimSeconds", "maxVideoDuration", "maxVideoLength", "maxVideoSeconds", "maxVideoUploadDuration", "maxVideoUploadDurationSeconds", "maxVideoUploadLength", "maxVideoUploadLengthSeconds", "maxVideoUploadSeconds", "max_duration", "max_length", "max_recording_duration", "max_trim_duration", "max_trim_duration_seconds", "max_trim_seconds", "max_video_length", "max_video_seconds", "max_video_upload_duration", "max_video_upload_duration_seconds", "max_video_upload_length", "max_video_upload_length_seconds", "max_video_upload_seconds", "maximumDuration", "maximum_duration", "mediaPickerMaxDuration", "mediaPickerMaxDurationSeconds", "mediaPickerMaxSeconds", "media_picker_duration", "media_picker_duration_seconds", "media_picker_max_duration", "media_picker_max_duration_seconds", "media_picker_max_seconds", "photoLibraryMaxDuration", "photoLibraryMaxDurationSeconds", "photoLibraryVideoMaxDuration", "photoLibraryVideoMaxDurationSeconds", "photoLibraryVideoMaxSeconds", "photo_library_max_duration", "photo_library_max_duration_seconds", "photo_library_max_seconds", "photo_library_video_duration", "photo_library_video_duration_seconds", "photo_library_video_max_duration", "photo_library_video_max_duration_seconds", "photo_library_video_max_seconds", "pickerVideoMaxDuration", "pickerVideoMaxDurationSeconds", "pickerVideoMaxSeconds", "picker_video_duration", "picker_video_duration_seconds", "picker_video_max_duration", "picker_video_max_duration_seconds", "picker_video_max_seconds", "recordingDuration", "recording_duration", "recording_max_duration", "trimDuration", "trimMaxDuration", "trimMaxDurationSeconds", "trimMaxSeconds", "trim_duration", "trim_duration_seconds", "trim_max_duration", "trim_max_duration_seconds", "trim_max_seconds", "uploadVideoDuration", "uploadVideoDurationSeconds", "uploadVideoLength", "uploadVideoLengthSeconds", "uploadVideoMaxDuration", "uploadVideoMaxDurationSeconds", "uploadVideoMaxLength", "uploadVideoMaxLengthSeconds", "uploadVideoMaxSeconds", "uploadVideoSeconds", "upload_video_duration", "upload_video_duration_sec", "upload_video_duration_seconds", "upload_video_length", "upload_video_length_seconds", "upload_video_max_duration", "upload_video_max_duration_sec", "upload_video_max_duration_seconds", "upload_video_max_length", "upload_video_max_length_seconds", "upload_video_max_seconds", "upload_video_seconds", "videoAssetMaxDuration", "videoAssetMaxDurationSeconds", "videoDuration", "videoDurationSeconds", "videoLength", "videoLengthSeconds", "videoMaxDuration", "videoPickerMaxDuration", "videoPickerMaxDurationSeconds", "videoPickerMaxSeconds", "videoRecordingDuration", "videoTrimMaxDuration", "videoTrimMaxDurationSeconds", "videoTrimMaxSeconds", "videoTrimmerDuration", "videoTrimmerMaxDuration", "videoTrimmerMaxDurationSeconds", "videoTrimmerMaxSeconds", "videoUploadDuration", "videoUploadDurationSeconds", "videoUploadLength", "videoUploadLengthSeconds", "videoUploadMaxDuration", "videoUploadMaxDurationSeconds", "videoUploadMaxLength", "videoUploadMaxLengthSeconds", "videoUploadMaxSeconds", "videoUploadSeconds", "video_asset_max_duration", "video_asset_max_duration_seconds", "video_duration", "video_duration_seconds", "video_length", "video_length_seconds", "video_max_duration", "video_max_duration_seconds", "video_max_length", "video_max_seconds", "video_picker_duration", "video_picker_duration_seconds", "video_picker_max_duration", "video_picker_max_duration_seconds", "video_picker_max_seconds", "video_recording_duration", "video_trim_duration", "video_trim_duration_seconds", "video_trim_max_duration_seconds", "video_trim_max_seconds", "video_trimmer_duration", "video_trimmer_duration_seconds", "video_trimmer_max_duration", "video_trimmer_max_duration_seconds", "video_trimmer_max_seconds", "video_upload_duration", "video_upload_duration_sec", "video_upload_duration_seconds", "video_upload_length", "video_upload_length_seconds", "video_upload_limit_seconds", "video_upload_max_duration", "video_upload_max_duration_sec", "video_upload_max_duration_seconds", "video_upload_max_length", "video_upload_max_length_seconds", "video_upload_max_seconds", "video_upload_seconds].forEach(function (name) {
+    var durationAliases = [
+      "assetPickerMaxDuration", "assetPickerMaxDurationSeconds", "asset_picker_max_duration", "asset_picker_max_duration_seconds",
+      "cameraMaxDuration", "cameraRollDuration", "cameraRollDurationSeconds", "cameraRollGoldMaxDuration", "cameraRollGoldMaxDurationSeconds",
+      "cameraRollMaxDuration", "cameraRollMaxDurationSec", "cameraRollMaxDurationSeconds", "cameraRollMaxSeconds", "cameraRollMaxVideoDuration",
+      "cameraRollMaxVideoDurationSeconds", "cameraRollMaxVideoSeconds", "cameraRollSeconds", "cameraRollTrimDuration", "cameraRollTrimDurationSeconds",
+      "cameraRollTrimMaxDuration", "cameraRollTrimMaxDurationSeconds", "cameraRollUploadDuration", "cameraRollUploadDurationSeconds",
+      "cameraRollUploadMaxDuration", "cameraRollUploadMaxDurationSeconds", "cameraRollUploadMaxSeconds", "cameraRollVideoDuration",
+      "cameraRollVideoDurationSeconds", "cameraRollVideoLength", "cameraRollVideoLengthSeconds", "cameraRollVideoMaxDuration",
+      "cameraRollVideoMaxDurationSeconds", "cameraRollVideoMaxLength", "cameraRollVideoMaxLengthSeconds", "cameraRollVideoMaxSeconds",
+      "cameraRollVideoSeconds", "cameraRollVideoTrimDuration", "cameraRollVideoTrimDurationSeconds", "cameraRollVideoTrimMaxDuration",
+      "cameraRollVideoTrimMaxDurationSeconds", "cameraRollVideoUploadMaxDuration", "cameraRollVideoUploadMaxDurationSeconds",
+      "cameraRollVideoUploadMaxSeconds", "camera_max_duration", "camera_roll_duration_sec", "camera_roll_duration_seconds",
+      "camera_roll_gold_max_duration", "camera_roll_gold_max_duration_seconds", "camera_roll_limit_seconds", "camera_roll_max_duration",
+      "camera_roll_max_duration_sec", "camera_roll_max_duration_seconds", "camera_roll_max_seconds", "camera_roll_max_video_duration",
+      "camera_roll_max_video_duration_seconds", "camera_roll_max_video_seconds", "camera_roll_seconds", "camera_roll_trim_duration",
+      "camera_roll_trim_duration_seconds", "camera_roll_trim_max_duration", "camera_roll_trim_max_duration_seconds", "camera_roll_trim_max_seconds",
+      "camera_roll_upload_duration", "camera_roll_upload_duration_seconds", "camera_roll_upload_max_duration", "camera_roll_upload_max_duration_sec",
+      "camera_roll_upload_max_duration_seconds", "camera_roll_upload_max_seconds", "camera_roll_video_duration", "camera_roll_video_duration_sec",
+      "camera_roll_video_duration_seconds", "camera_roll_video_length", "camera_roll_video_length_seconds", "camera_roll_video_limit_seconds",
+      "camera_roll_video_max_duration", "camera_roll_video_max_duration_sec", "camera_roll_video_max_duration_seconds", "camera_roll_video_max_length",
+      "camera_roll_video_max_length_seconds", "camera_roll_video_max_seconds", "camera_roll_video_seconds", "camera_roll_video_trim_duration",
+      "camera_roll_video_trim_duration_seconds", "camera_roll_video_trim_max_duration", "camera_roll_video_trim_max_duration_seconds",
+      "camera_roll_video_trim_max_seconds", "camera_roll_video_upload_duration", "camera_roll_video_upload_duration_seconds",
+      "camera_roll_video_upload_limit_seconds", "camera_roll_video_upload_max_duration", "camera_roll_video_upload_max_duration_sec",
+      "camera_roll_video_upload_max_duration_seconds", "camera_roll_video_upload_max_seconds", "extendedVideoDuration", "extendedVideoSeconds",
+      "extended_video_duration", "extended_video_seconds", "galleryMaxDuration", "galleryMaxDurationSeconds", "galleryMaxSeconds",
+      "galleryVideoDuration", "galleryVideoMaxDuration", "galleryVideoMaxDurationSeconds", "galleryVideoMaxSeconds", "gallery_max_duration",
+      "gallery_max_duration_seconds", "gallery_max_seconds", "gallery_video_duration", "gallery_video_duration_seconds",
+      "gallery_video_max_duration", "gallery_video_max_duration_seconds", "gallery_video_max_seconds", "goldMaxDuration", "gold_max_duration",
+      "libraryVideoDuration", "libraryVideoMaxDuration", "libraryVideoMaxDurationSeconds", "libraryVideoMaxSeconds", "library_video_duration",
+      "library_video_duration_seconds", "library_video_max_duration", "library_video_max_duration_seconds", "library_video_max_seconds",
+      "longerVideoDurationSeconds", "longerVideoMaxDuration", "longerVideoMaxDurationSeconds", "longerVideoSeconds", "longerVideoUploadDuration",
+      "longerVideoUploadDurationSeconds", "longerVideoUploadMaxDuration", "longerVideoUploadMaxDurationSeconds", "longerVideoUploadMaxSeconds",
+      "longer_video_duration", "longer_video_duration_seconds", "longer_video_max_duration_seconds", "longer_video_seconds",
+      "longer_video_upload_duration", "longer_video_upload_duration_seconds", "longer_video_upload_max_duration",
+      "longer_video_upload_max_duration_seconds", "longer_video_upload_max_seconds", "longer_videos_duration", "maxDuration",
+      "maxRecordingDuration", "maxTrimDuration", "maxTrimDurationSeconds", "maxTrimSeconds", "maxVideoDuration", "maxVideoLength",
+      "maxVideoSeconds", "maxVideoUploadDuration", "maxVideoUploadDurationSeconds", "maxVideoUploadLength", "maxVideoUploadLengthSeconds",
+      "maxVideoUploadSeconds", "max_duration", "max_length", "max_recording_duration", "max_trim_duration", "max_trim_duration_seconds",
+      "max_trim_seconds", "max_video_length", "max_video_seconds", "max_video_upload_duration", "max_video_upload_duration_seconds",
+      "max_video_upload_length", "max_video_upload_length_seconds", "max_video_upload_seconds", "maximumDuration", "maximum_duration",
+      "mediaPickerMaxDuration", "mediaPickerMaxDurationSeconds", "mediaPickerMaxSeconds", "media_picker_duration", "media_picker_duration_seconds",
+      "media_picker_max_duration", "media_picker_max_duration_seconds", "media_picker_max_seconds", "photoLibraryMaxDuration",
+      "photoLibraryMaxDurationSeconds", "photoLibraryVideoMaxDuration", "photoLibraryVideoMaxDurationSeconds", "photoLibraryVideoMaxSeconds",
+      "photo_library_max_duration", "photo_library_max_duration_seconds", "photo_library_max_seconds", "photo_library_video_duration",
+      "photo_library_video_duration_seconds", "photo_library_video_max_duration", "photo_library_video_max_duration_seconds",
+      "photo_library_video_max_seconds", "pickerVideoMaxDuration", "pickerVideoMaxDurationSeconds", "pickerVideoMaxSeconds",
+      "picker_video_duration", "picker_video_duration_seconds", "picker_video_max_duration", "picker_video_max_duration_seconds",
+      "picker_video_max_seconds", "recordingDuration", "recording_duration", "recording_max_duration", "trimDuration", "trimMaxDuration",
+      "trimMaxDurationSeconds", "trimMaxSeconds", "trim_duration", "trim_duration_seconds", "trim_max_duration", "trim_max_duration_seconds",
+      "trim_max_seconds", "uploadVideoDuration", "uploadVideoDurationSeconds", "uploadVideoLength", "uploadVideoLengthSeconds",
+      "uploadVideoMaxDuration", "uploadVideoMaxDurationSeconds", "uploadVideoMaxLength", "uploadVideoMaxLengthSeconds", "uploadVideoMaxSeconds",
+      "uploadVideoSeconds", "upload_video_duration", "upload_video_duration_sec", "upload_video_duration_seconds", "upload_video_length",
+      "upload_video_length_seconds", "upload_video_max_duration", "upload_video_max_duration_sec", "upload_video_max_duration_seconds",
+      "upload_video_max_length", "upload_video_max_length_seconds", "upload_video_max_seconds", "upload_video_seconds", "videoAssetMaxDuration",
+      "videoAssetMaxDurationSeconds", "videoDuration", "videoDurationSeconds", "videoLength", "videoLengthSeconds", "videoMaxDuration",
+      "videoPickerMaxDuration", "videoPickerMaxDurationSeconds", "videoPickerMaxSeconds", "videoRecordingDuration", "videoTrimMaxDuration",
+      "videoTrimMaxDurationSeconds", "videoTrimMaxSeconds", "videoTrimmerDuration", "videoTrimmerMaxDuration", "videoTrimmerMaxDurationSeconds",
+      "videoTrimmerMaxSeconds", "videoUploadDuration", "videoUploadDurationSeconds", "videoUploadMaxDuration", "videoUploadMaxDurationSeconds",
+      "videoUploadMaxSeconds"
+    ];
+    durationAliases.forEach(function (name) {
       if (Object.prototype.hasOwnProperty.call(config, name)) {
         config[name] = VIDEO_SECONDS;
-      }
-    });
-    [max_duration_ms", "video_max_duration_ms", "gold_max_duration_ms", "recording_duration_ms", "trim_max_duration_ms].forEach(function (name) {
-      if (Object.prototype.hasOwnProperty.call(config, name)) {
-        config[name] = VIDEO_SECONDS * 1000;
       }
     });
     function audioFlags(object) {
@@ -910,17 +965,17 @@
           object[name] = VIDEO_SECONDS;
         }
       });
-      [max_duration_ms", "video_max_duration_ms", "gold_max_duration_ms", "recording_duration_ms", "trim_max_duration_ms].forEach(function (name) {
+      ["max_duration_ms", "video_max_duration_ms", "gold_max_duration_ms", "recording_duration_ms", "trim_max_duration_ms"].forEach(function (name) {
         if (Object.prototype.hasOwnProperty.call(object, name)) {
           object[name] = VIDEO_SECONDS * 1000;
         }
       });
-      [camera_roll_max_size_bytes", "camera_roll_max_video_size_bytes", "camera_roll_video_max_file_size", "gallery_video_max_size_bytes", "maxUploadSizeBytes", "maxVideoBytes", "max_file_size", "max_file_size_bytes", "max_size_bytes", "max_upload_bytes", "max_upload_size_bytes", "max_video_bytes", "max_video_file_size", "max_video_size_bytes", "upload_max_file_size", "upload_max_size_bytes", "upload_max_video_size_bytes", "video_max_file_size", "video_max_size_bytes", "video_upload_max_bytes", "video_upload_max_size_bytes].forEach(function (name) {
+      ["camera_roll_max_size_bytes", "camera_roll_max_video_size_bytes", "camera_roll_video_max_file_size", "gallery_video_max_size_bytes", "maxUploadSizeBytes", "maxVideoBytes", "max_file_size", "max_file_size_bytes", "max_size_bytes", "max_upload_bytes", "max_upload_size_bytes", "max_video_bytes", "max_video_file_size", "max_video_size_bytes", "upload_max_file_size", "upload_max_size_bytes", "upload_max_video_size_bytes", "video_max_file_size", "video_max_size_bytes", "video_upload_max_bytes", "video_upload_max_size_bytes"].forEach(function (name) {
         if (Object.prototype.hasOwnProperty.call(object, name)) {
           object[name] = typeof object[name] === "string" ? String(VIDEO_BYTES) : VIDEO_BYTES;
         }
       });
-      [camera_roll_max_video_size_mb", "maxUploadSizeMb", "maxVideoSizeMb", "max_file_size_mb", "max_size_mb", "max_upload_mb", "max_upload_size_mb", "max_video_size_mb", "upload_max_size_mb", "video_max_size_mb].forEach(function (name) {
+      ["camera_roll_max_video_size_mb", "maxUploadSizeMb", "maxVideoSizeMb", "max_file_size_mb", "max_size_mb", "max_upload_mb", "max_upload_size_mb", "max_video_size_mb", "upload_max_size_mb", "video_max_size_mb"].forEach(function (name) {
         if (Object.prototype.hasOwnProperty.call(object, name)) {
           object[name] = typeof object[name] === "string" ? "100" : 100;
         }
@@ -1280,7 +1335,7 @@
     ["camera_roll_max_size_bytes", "camera_roll_max_video_size_bytes", "camera_roll_video_max_file_size", "gallery_video_max_size_bytes", "maxUploadSizeBytes", "maxVideoBytes", "max_file_size", "max_file_size_bytes", "max_size_bytes", "max_upload_bytes", "max_upload_size_bytes", "max_video_bytes", "max_video_file_size", "max_video_size_bytes", "upload_max_file_size", "upload_max_size_bytes", "upload_max_video_size_bytes", "video_max_file_size", "video_max_size_bytes", "video_upload_max_bytes", "video_upload_max_size_bytes"].forEach(function (key) {
       entries[key] = String(VIDEO_BYTES);
     });
-    ["camera_roll_max_video_size_mb", "maxUploadSizeMb", "maxVideoSizeMb", camera_roll_max_video_size_mb", "maxUploadSizeMb", "maxVideoSizeMb", "max_file_size_mb", "max_size_mb", "max_upload_mb", "max_upload_size_mb", "max_video_size_mb", "upload_max_size_mb", "video_max_size_mb, "max_upload_size_mb", "max_video_size_mb", "upload_max_size_mb", "video_max_size_mb"].forEach(function (key) {
+    ["camera_roll_max_video_size_mb", "maxUploadSizeMb", "maxVideoSizeMb", "max_file_size_mb", "max_size_mb", "max_upload_mb", "max_upload_size_mb", "max_video_size_mb", "upload_max_size_mb", "video_max_size_mb"].forEach(function (key) {
       if (entries[key] !== undefined) {
         entries[key] = "100";
       }
