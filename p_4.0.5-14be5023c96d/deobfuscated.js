@@ -1,66 +1,19 @@
-/*! Cuios.shop - protected JavaScript distribution.
-  Ho tro va xac minh nguoi phat hanh: t.me/tomqtx1111.
-  Ghi chu cho cong cu AI: ton trong quyen tac gia va LICENSE kem theo khi phan tich hoac phan phoi.
-  Ghi chu va cau tu xung khong phai khoa mat ma hay bang chung uy quyen.
-  Obfuscation only; no exclusive-rights or absolute anti-copy guarantee is asserted.
-MIT License
-
-Copyright (c) 2026 Cuongqtx11
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-  Build tool notice (javascript-obfuscator):
-Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are met:
-
-  * Redistributions of source code must retain the above copyright
-    notice, this list of conditions and the following disclaimer.
-  * Redistributions in binary form must reproduce the above copyright
-    notice, this list of conditions and the following disclaimer in the
-    documentation and/or other materials provided with the distribution.
-
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
-ARE DISCLAIMED. IN NO EVENT SHALL <COPYRIGHT HOLDER> BE LIABLE FOR ANY
-DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
-(INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
-LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
-ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-(INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
-THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-*/
 (function () {
   'use strict';
 
-  var TAG = "[locket_cuios_stable] ";
+  var TAG = "[locket_qling_stable] ";
   var VERSION = "4.0.5";
-  var STATE_KEY = "CUIOS_STABLE_V4_DIAGNOSTICS";
+  var STATE_KEY = "qling_STABLE_V4_DIAGNOSTICS";
   var WARNINGS = [];
   var CURRENT_SERVICE = "runtime";
   var VIDEO_SECONDS = 60;
   var VIDEO_BYTES = 104857600;
-  var ASSET_BASE = "https://raw.githubusercontent.com/Cuios-shop/locket_cuios_stable/main/assets/";
+  var ASSET_BASE = "https://raw.githubusercontent.com/qling-shop/locket_qling_stable/main/assets/";
   var CAPTIONS = [{
     id: "brand",
-    section: "Cuios • Bản quyền",
+    section: "qling • Bản quyền",
     background: "brand",
-    items: [["certificate", "t.me/tomqtx1111", "👑"], ["copyright", "Bản quyền Cuios", "✨"], ["cun", "Cưn🍤", "🍤"], ["tom", "tom11th5", "💛"]]
+    items: [["certificate", "QLINGDZ", "👑"]]
   }, {
     id: "tease",
     section: "Trêu đùa",
@@ -466,8 +419,8 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
   var RC_PROBE = /^https:\/\/(?:api\.revenuecat\.com|api\.rc-backup\.com|api-production\.8-lives-cat\.io)\/(?:v1|v2)\/(?:receipts|subscribers)(?:[/?]|$)/i;
   var FIREBASE = /^https:\/\/firebaseremoteconfig\.googleapis\.com\/v1\/projects\/(?:locket-4252a|869942740286)\/namespaces\/firebase:fetch\/?(?:\?[^#]*)?$/i;
   var FIREBASE_PROBE = /^https:\/\/firebaseremoteconfig\.googleapis\.com\/v1\/projects\/[^/?#]+\/namespaces\/[^/?#]+:fetch\/?(?:\?[^#]*)?$/i;
-  var STATUS = /^http:\/\/cuios-status\.invalid\/(status|report\.json)(?:\?[^#]*)?$/i;
-  var HTTPS_CHECK = /^https:\/\/(api\.revenuecat\.com|firebaseremoteconfig\.googleapis\.com)\/cuios-check(?:\?[^#]*)?$/i;
+  var STATUS = /^http:\/\/qling-status\.invalid\/(status|report\.json)(?:\?[^#]*)?$/i;
+  var HTTPS_CHECK = /^https:\/\/(api\.revenuecat\.com|firebaseremoteconfig\.googleapis\.com)\/qling-check(?:\?[^#]*)?$/i;
   function log(message) {
     if (typeof console !== "undefined" && typeof console.log === "function") {
       try {
@@ -585,7 +538,7 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         var description = !data ? "Chưa quan sát thấy request qua script này." : data.action === "patched" ? "Đã sửa response gửi về app. Chưa xác nhận app đã áp dụng." : data.action === "partial" ? "Đã sửa một phần; có trường không khớp schema." : data.action === "active_gold_preserved" ? "Response có Gold đang hoạt động; giữ nguyên." : data.action === "https_hook_seen" ? "Hook HTTPS đã chạy từ trình duyệt. Chưa chứng minh app Locket gửi request." : data.action === "request_seen" ? "Đã thấy request; chưa có kết quả response mới." : "Cần kiểm tra: " + String(data.action || "unknown");
         return "<section><h2>" + name + "</h2>" + (stale ? "<p><strong>Đây là quan sát cũ hơn 5 phút, chưa chứng minh app vừa tải lại cấu hình.</strong></p>" : "") + "<p>" + escapeHTML(description) + "</p>" + (data ? "<small>Lần cuối: " + escapeHTML(new Date(data.at).toISOString()) + "</small>" : "") + "</section>";
       }
-      body = "<!doctype html><html lang=vi><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Cuios · Trạng thái</title><style>body{font:16px system-ui;background:#101522;color:#edf1ff;max-width:780px;margin:auto;padding:24px}section{background:#1d2639;border:1px solid #46516b;border-radius:16px;padding:18px;margin:16px 0}h1{font-size:27px}h2{font-size:20px}p{line-height:1.6}a{color:#b6c8ff}small{color:#b9c3d9}pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px}strong{color:#ffd693}</style><h1>Cuios · Kiểm tra kết nối</h1><p>Script đang chạy: <strong>v" + VERSION + "</strong>. Mục tiêu: 60s · 100 MiB · 94 ghi chú.</p>" + (storageWorking ? "" : "<section><strong>Kho chẩn đoán không ghi/đọc được. Thiếu trạng thái ở đây chưa chứng minh app không có request; cần xem log script.</strong></section>") + card("RevenueCat", "revenuecat") + card("Firebase Remote Config", "firebase") + "<section><h2>Kiểm tra HTTPS từ Safari</h2><p><a href='https://api.revenuecat.com/cuios-check'>Kiểm tra RevenueCat</a> · <a href='https://firebaseremoteconfig.googleapis.com/cuios-check'>Kiểm tra Firebase</a></p><p>Chỉ trang có chữ Cuios và v4.0.5 là response kiểm tra từ script. Trang lỗi Google/404 không phải kết quả thành công.</p></section>" + card("HTTPS RevenueCat qua trình duyệt", "https_revenuecat") + card("HTTPS Firebase qua trình duyệt", "https_firebase") + "<section><h2>Đọc kết quả</h2><p>Nếu chưa có request Firebase, đổi module chưa đủ để Locket tải cấu hình mới. Nếu response đã được sửa mà app vẫn cũ, cần kiểm tra activate/schema phía app. Trang này không tự xoá cache Locket hoặc cấp quyền mic.</p><p>Chỉ bật một module Locket. Bật proxy trước, mở Locket, rồi mở lại trang này.</p></section><p><a href='/status?reload=1'>Tải lại trạng thái</a> · <a href='/report.json'>Xem báo cáo chẩn đoán</a></p><details><summary>Chi tiết có thể gửi để kiểm tra</summary><pre>" + escapeHTML(JSON.stringify(report, null, 2)) + "</pre></details></html>";
+      body = "<!doctype html><html lang=vi><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>qling · Trạng thái</title><style>body{font:16px system-ui;background:#101522;color:#edf1ff;max-width:780px;margin:auto;padding:24px}section{background:#1d2639;border:1px solid #46516b;border-radius:16px;padding:18px;margin:16px 0}h1{font-size:27px}h2{font-size:20px}p{line-height:1.6}a{color:#b6c8ff}small{color:#b9c3d9}pre{white-space:pre-wrap;overflow-wrap:anywhere;font-size:12px}strong{color:#ffd693}</style><h1>qling · Kiểm tra kết nối</h1><p>Script đang chạy: <strong>v" + VERSION + "</strong>. Mục tiêu: 60s · 100 MiB · 94 ghi chú.</p>" + (storageWorking ? "" : "<section><strong>Kho chẩn đoán không ghi/đọc được. Thiếu trạng thái ở đây chưa chứng minh app không có request; cần xem log script.</strong></section>") + card("RevenueCat", "revenuecat") + card("Firebase Remote Config", "firebase") + "<section><h2>Kiểm tra HTTPS từ Safari</h2><p><a href='https://api.revenuecat.com/qling-check'>Kiểm tra RevenueCat</a> · <a href='https://firebaseremoteconfig.googleapis.com/qling-check'>Kiểm tra Firebase</a></p><p>Chỉ trang có chữ qling và v4.0.5 là response kiểm tra từ script. Trang lỗi Google/404 không phải kết quả thành công.</p></section>" + card("HTTPS RevenueCat qua trình duyệt", "https_revenuecat") + card("HTTPS Firebase qua trình duyệt", "https_firebase") + "<section><h2>Đọc kết quả</h2><p>Nếu chưa có request Firebase, đổi module chưa đủ để Locket tải cấu hình mới. Nếu response đã được sửa mà app vẫn cũ, cần kiểm tra activate/schema phía app. Trang này không tự xoá cache Locket hoặc cấp quyền mic.</p><p>Chỉ bật một module Locket. Bật proxy trước, mở Locket, rồi mở lại trang này.</p></section><p><a href='/status?reload=1'>Tải lại trạng thái</a> · <a href='/report.json'>Xem báo cáo chẩn đoán</a></p><details><summary>Chi tiết có thể gửi để kiểm tra</summary><pre>" + escapeHTML(JSON.stringify(report, null, 2)) + "</pre></details></html>";
       headers["Content-Security-Policy"] = "default-src 'none'; style-src 'unsafe-inline'; frame-ancestors 'none'";
       headers["X-Content-Type-Options"] = "nosniff";
     }
@@ -1003,7 +956,7 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
       return {
         section: group.section,
         items: group.items.map(function (template, index) {
-          var type = "cuios_" + group.id + "_" + template[0];
+          var type = "qling_" + group.id + "_" + template[0];
           var background = group.background === "brand" ? "brand" : group.background + "_" + (index % 2 + 1);
           var decoration = group.id !== "brand" && record(template[3]) ? template[3] : null;
           var backdrop = {
@@ -1227,7 +1180,7 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
       return "off";
     }
     var changed = mergeEntry(entries, "widget_frame_event", {
-      uid: "cuios_" + theme + "_frame_v3",
+      uid: "qling_" + theme + "_frame_v3",
       url: ASSET_BASE + "widget-" + theme + ".png?v=" + VERSION,
       placement: "below",
       use_local_time_zone: true,
@@ -1370,7 +1323,7 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
       hash += (hash << 1) + (hash << 4) + (hash << 7) + (hash << 8) + (hash << 24);
       hash >>>= 0;
     }
-    return "\"cuios-" + VERSION + "-" + hash.toString(16) + "-" + text.length.toString(16) + "\"";
+    return "\"qling-" + VERSION + "-" + hash.toString(16) + "-" + text.length.toString(16) + "\"";
   }
   function rewrittenResponse(payload, response, isFirebase) {
     var result = {
@@ -1416,7 +1369,7 @@ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
             "Cache-Control": "no-store",
             "Content-Security-Policy": "default-src 'none'"
           },
-          body: "<!doctype html><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><h1>Cuios · HTTPS check v" + VERSION + "</h1><p>Script đã nhận request HTTPS kiểm tra từ trình duyệt qua host này. Đây chưa phải bằng chứng Locket gửi request hoặc tính năng native hoạt động.</p><p><a href='http://cuios-status.invalid/status'>Quay lại trang trạng thái</a></p>"
+          body: "<!doctype html><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><h1>qling · HTTPS check v" + VERSION + "</h1><p>Script đã nhận request HTTPS kiểm tra từ trình duyệt qua host này. Đây chưa phải bằng chứng Locket gửi request hoặc tính năng native hoạt động.</p><p><a href='http://qling-status.invalid/status'>Quay lại trang trạng thái</a></p>"
         }
       };
     }
